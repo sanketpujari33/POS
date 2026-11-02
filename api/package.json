@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "postinstall": "node scripts/patch-whatsapp-media.cjs",
-    "start": "node server.js",
-    "dev": "nodemon server.js",
+    "start": "node init && node server.js",
+    "dev": "node init && nodemon server.js",
     "test": "jest -c jest.ci.config.js --detectOpenHandles --forceExit",
     "test:unit": "jest -c jest.ci.config.js tests/unit --detectOpenHandles --forceExit",
     "test:watch": "jest --watch",
