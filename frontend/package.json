@@ -4,9 +4,9 @@
   "description": "Build pipeline for the Posnic web assets (gulp: sass, JS, HTML).",
   "main": "index.js",
   "scripts": {
-    "build": "gulp build && node zip-build.js",
-    "build:assets": "gulp build",
-    "build:dev": "npm install && cross-env NODE_ENV=dev gulp build && node zip-build.js",
+    "build": "node init && gulp build && node zip-build.js",
+    "build:assets": "node init && gulp build",
+    "build:dev": "node init && npm install && cross-env NODE_ENV=dev gulp build && node zip-build.js",
     "test": "node -e \"console.log('no tests here - the frontend is a build pipeline; the app suite is in ../tests and ../api/tests')\"",
     "setup": "npm ci"
   },
